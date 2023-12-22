@@ -13,7 +13,8 @@ const Login = () => {
 
     // Password validation
     var passwordInput = document.getElementById("password");
-    var passwordRegex = /^(?=.*?[A-Z])(?=.*?\d)(?=.*?@)[a-zA-Z0-9@]+$/;
+    // var passwordRegex = /^(?=.*?[A-Z])(?=.*?\d)(?=.*?@)[a-zA-Z0-9@]+$/;
+    var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*@)[A-Za-z\d@]{8,}$/;
     if (!passwordRegex.test(passwordInput.value)) {
       alert(
         "Password must contain an uppercase letter, a number, and should not contain special characters other than @"
@@ -24,6 +25,8 @@ const Login = () => {
     // If both validations pass, you can proceed with further actions (e.g., form submission)
     if (passwordInput.value == "SmartServTest@123") {
       console.log("Redirect");
+      alert("Login successful!");
+      window.location.href = '/dashboard'; 
     }
     alert("Login successful!");
   }

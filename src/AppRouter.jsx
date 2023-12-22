@@ -7,8 +7,8 @@ const AppRouter = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/" exact component={Login} />
-        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/task-4" exact component={Login} />
+        <Route path="/task-4/dashboard" component={Dashboard} />
       </Switch>
     </Router>
   );
